@@ -1,0 +1,1703 @@
+<txnmgr name="txnmgr" logger="Q2" class="org.jpos.transaction.TransactionManager">
+    <property name="space" value="tspace:mySpace"/>
+    <!--<property name="space" value="jdbm:mySpace"/>-->
+    <property name="queue" value="TransactionQueue"/>
+    <property name="debug" value="true"/>
+    <property name="max-sessions" value="8000"/>
+
+    <participant class="com.misc.core.Switch" logger="Q2">
+
+
+        <!--        Balance-->
+        <property name="2100-310000-108"
+                  value="addAdditionalDataNational,
+                  monitoring,
+                  workingDate,
+                  hostChannelLog,
+                  financialMsgRequest,
+                  selectTerminal,
+                  selectServiceDetail,
+                  requestNoGen,
+                  selectPan4Processing,
+                  getPanInfo,
+                  pinVerify,
+                  checkKahrobaTxConstraints,
+                  feeCalc,
+                  balance,
+                  sendResponse"/>
+
+        <!--        Statement-->
+        <property name="2100-340000-108"
+                  value="addAdditionalDataNational,
+                  monitoring,
+                  workingDate,
+                  hostChannelLog,
+                  financialMsgRequest,
+                  selectTerminal,
+                  selectServiceDetail,
+                  requestNoGen,
+                  selectPan4Processing,
+                  getPanInfo,
+                  pinVerify,
+                  feeCalc,
+                  statement,
+                  prepareResponse,
+                  sendResponseWithCheckRequiredReverse"/>
+
+        <!--        PinVerify-->
+        <property name="2100-710000-180"
+                  value="addAdditionalDataNational,
+                  monitoring,
+                  workingDate,
+                  hostChannelLog,
+                  financialMsgRequest,
+                  selectTerminal,
+                  selectServiceDetail,
+                  requestNoGen,
+                  selectPan4Processing,
+                  getPanInfo,
+                  pinVerify,
+                  feeCalc,
+                  fee,
+                  prepareResponse,
+                  sendResponseWithCheckRequiredReverse"/>
+
+
+        <!--    transferVerification byCard    -->
+        <property name="2100-330000-113"
+                  value="addAdditionalDataNational,
+                  monitoring,
+                  workingDate,
+                  hostChannelLog,
+                  financialMsgRequest,
+                  selectTerminal,
+                  selectServiceDetail,
+                  requestNoGen,
+                  selectPan4Processing,
+                  getPanInfo,
+                  transferVerification,
+                  sendResponse"/>
+        <!--        transferVerification byIban-->
+        <property name="2100-330000-181"
+                  value="addAdditionalDataNational,
+                  monitoring,
+                  hostChannelLog,
+                  financialMsgRequest,
+                  selectTerminal,
+                  selectServiceDetail,
+                  requestNoGen,
+                  selectDestinationAccount,
+                  transferVerification,
+                  sendResponse"/>
+
+        <!--        transferVerification-->
+        <property name="2100-330000-109"
+                  value="addAdditionalDataNational,
+                  monitoring,
+                  hostChannelLog,
+                  financialMsgRequest,
+                  selectTerminal,
+                  selectServiceDetail,
+                  requestNoGen,
+                  selectDestinationAccount,
+                  transferVerification,
+                  sendResponse"/>
+
+        <!--        transferVerification-->
+        <property name="2100-330000-182"
+                  value="addAdditionalDataNational,
+                  monitoring,
+                  hostChannelLog,
+                  financialMsgRequest,
+                  selectTerminal,
+                  selectServiceDetail,
+                  requestNoGen,
+                  selectDestinationAccount,
+                  transferVerification,
+                  sendResponse"/>
+
+
+        <!--    buy    -->
+        <property name="2200-000000"
+                  value="addAdditionalDataNational,
+                  monitoring,
+                  workingDate,
+                  hostChannelLog,
+                  financialMsgRequest,
+                  selectTerminal,
+                  selectServiceDetail,
+                  requestNoGen,
+                  selectPan4Processing,
+                  getPanInfo,
+                  pinVerify,
+                  checkKahrobaTxConstraints,
+                  feeCalc,
+                  buy,
+                  sendResponseWithCheckRequiredReverse"/>
+
+
+        <!--   Payment     -->
+        <property name="2200-500000-200"
+                  value="addAdditionalDataNational,
+                  monitoring,
+                  workingDate,
+                  hostChannelLog,
+                  financialMsgRequest,
+                  selectTerminal,
+                  selectServiceDetail,
+                  requestNoGen,
+                  selectPan4Processing,
+                  getPanInfo,
+                  pinVerify,
+                  feeCalc,
+                  payment,
+                  sendResponseWithCheckRequiredReverse"/>
+
+        <!--   General bill Payment    -->
+        <property name="2200-500000-280"
+                  value="addAdditionalDataNational,
+                  monitoring,
+                  workingDate,
+                  hostChannelLog,
+                  financialMsgRequest,
+                  selectTerminal,
+                  selectServiceDetail,
+                  requestNoGen,
+                  selectPan4Processing,
+                  getPanInfo,
+                  pinVerify,
+                  feeCalc,
+                  payment,
+                  sendResponseWithCheckRequiredReverse"/>
+
+        <!--   General installment Payment    -->
+        <property name="2200-500000-281"
+                  value="addAdditionalDataNational,
+                  monitoring,
+                  workingDate,
+                  hostChannelLog,
+                  financialMsgRequest,
+                  selectTerminal,
+                  selectServiceDetail,
+                  requestNoGen,
+                  selectPan4Processing,
+                  getPanInfo,
+                  pinVerify,
+                  feeCalc,
+                  payment,
+                  sendResponseWithCheckRequiredReverse"/>
+
+        <!--   Special Bill Payment    -->
+        <property name="2200-500000-283"
+                  value="addAdditionalDataNational,
+                  monitoring,
+                  workingDate,
+                  hostChannelLog,
+                  financialMsgRequest,
+                  selectTerminal,
+                  selectServiceDetail,
+                  requestNoGen,
+                  selectPan4Processing,
+                  getPanInfo,
+                  pinVerify,
+                  feeCalc,
+                  payment,
+                  sendResponseWithCheckRequiredReverse"/>
+
+        <!--   Charge Payment    -->
+        <property name="2200-500000-284"
+                  value="addAdditionalDataNational,
+                  monitoring,
+                  workingDate,
+                  hostChannelLog,
+                  financialMsgRequest,
+                  selectTerminal,
+                  selectServiceDetail,
+                  requestNoGen,
+                  selectPan4Processing,
+                  getPanInfo,
+                  pinVerify,
+                  feeCalc,
+                  payment,
+                  sendResponseWithCheckRequiredReverse"/>
+
+        <!--   internalCash from internal     -->
+        <property name="2200-010000-636795"
+                  value="addAdditionalDataNational,
+                  monitoring,
+                  workingDate,
+                  hostChannelLog,
+                  financialMsgRequest,
+                  selectTerminal,
+                  selectServiceDetail,
+                  requestNoGen,
+                  selectPan4Processing,
+                  getPanInfo,
+                  pinVerify,
+                  feeCalc,
+                  internalCash,
+                  sendResponseWithCheckRequiredReverse"/>
+        <!--   cashWithdraw from Shetab    -->
+        <property name="2200-010000"
+                  value="addAdditionalDataNational,
+                  monitoring,
+                  workingDate,
+                  hostChannelLog,
+                  financialMsgRequest,
+                  selectTerminal,
+                  selectServiceDetail,
+                  requestNoGen,
+                  selectPan4Processing,
+                  getPanInfo,
+                  pinVerify,
+                  feeCalc,
+                  externalCash,
+                  sendResponseWithCheckRequiredReverse"/>
+
+        <!-- cash Deposit verification -->
+        <property name="2100-210000-101-636795"
+                  value="addAdditionalDataNational,
+                  monitoring,
+                  workingDate,
+                  hostChannelLog,
+                  financialMsgRequest,
+                  selectTerminal,
+                  selectServiceDetail,
+                  requestNoGen,
+                  selectPan4Processing,
+                  getPanInfo,
+                  pinVerify,
+                  cashDepositVerification,
+                  sendResponseWithCheckRequiredReverse"/>
+
+        <!-- cash Deposit Confirmation -->
+        <property name="2220-210000-200-636795"
+                  value="addAdditionalDataNational,
+                  monitoring,
+                  workingDate,
+                  hostChannelLog,
+                  financialMsgRequest,
+                  selectTerminal,
+                  selectServiceDetail,
+                  requestNoGen,
+                  selectPan4Processing,
+                  getPanInfo,
+                  validatePanWithoutTrack2,
+                  feeCalc,
+                  cashDepositConfirmation,
+                  sendResponse"/>
+
+
+        <!--   transfer(internal) to card 40 -->
+        <property name="2200-400000-200"
+                  value="addAdditionalDataNational,
+                  monitoring,
+                  workingDate,
+                  hostChannelLog,
+                  financialMsgRequest,
+                  selectTerminal,
+                  selectServiceDetail,
+                  requestNoGen,
+                  selectPan4Processing,
+                  getPanInfo,
+                  selectDestinationAccount,
+                  pinVerify,
+                  feeCalc,
+                  transfer,
+                  sendResponseWithCheckRequiredReverse"/>
+
+
+        <!--   transfer(internal) to iban 40 -->
+        <property name="2200-400000-285"
+                  value="addAdditionalDataNational,
+                  monitoring,
+                  workingDate,
+                  hostChannelLog,
+                  financialMsgRequest,
+                  selectTerminal,
+                  selectServiceDetail,
+                  requestNoGen,
+                  selectPan4Processing,
+                  getPanInfo,
+                  selectDestinationAccount,
+                  pinVerify,
+                  feeCalc,
+                  transfer,
+                  sendResponseWithCheckRequiredReverse"/>
+
+        <!--   transfer(From) to Card -->
+        <property name="2200-4K0000-200"
+                  value="addAdditionalDataNational,
+                  monitoring,
+                  workingDate,
+                  hostChannelLog,
+                  financialMsgRequest,
+                  selectTerminal,
+                  selectServiceDetail,
+                  requestNoGen,
+                  selectPan4Processing,
+                  getPanInfo,
+                  selectDestinationAccount,
+                  pinVerify,
+                  feeCalc,
+                  transfer,
+                  sendResponseWithCheckRequiredReverse"/>
+
+        <!--   transfer(From) to Iban -->
+        <property name="2200-4K0000-286"
+                  value="addAdditionalDataNational,
+                  monitoring,
+                  workingDate,
+                  hostChannelLog,
+                  financialMsgRequest,
+                  selectTerminal,
+                  selectServiceDetail,
+                  requestNoGen,
+                  selectPan4Processing,
+                  getPanInfo,
+                  selectDestinationAccount,
+                  pinVerify,
+                  feeCalc,
+                  transfer,
+                  sendResponseWithCheckRequiredReverse"/>
+
+        <!--   transfer(to) to card -->
+        <property name="2200-4L0000-200"
+                  value="addAdditionalDataNational,
+                  monitoring,
+                  workingDate,
+                  hostChannelLog,
+                  financialMsgRequest,
+                  selectTerminal,
+                  selectServiceDetail,
+                  requestNoGen,
+                  selectPan4Processing,
+                  getPanInfo,
+                  selectDestinationAccount,
+                  pinVerify,
+                  feeCalc,
+                  transfer,
+                  sendResponseWithCheckRequiredReverse"/>
+
+
+        <!--   transfer(to) to Iban -->
+        <property name="2200-4L0000-287"
+                  value="addAdditionalDataNational,
+                  monitoring,
+                  workingDate,
+                  hostChannelLog,
+                  financialMsgRequest,
+                  selectTerminal,
+                  selectServiceDetail,
+                  requestNoGen,
+                  selectPan4Processing,
+                  getPanInfo,
+                  selectDestinationAccount,
+                  pinVerify,
+                  feeCalc,
+                  transfer,
+                  sendResponseWithCheckRequiredReverse"/>
+
+        <!--        PurchaseRefund-ToCustomer-Offline-->
+        <property name="2220-200000-260"
+                  value="addAdditionalDataNational,
+                  monitoring,
+                  workingDate,
+                  hostChannelLog,
+                  financialMsgRequest,
+                  requestNoGen,
+                  selectServiceDetail,
+                  checkDoneReconciliation,
+                  selectPan4Processing,
+                  getPanInfo,
+                  selectDestinationAccount,
+                  soroush,
+                  sendResponseWithCheckRequiredReverse"/>
+
+        <!--        PurchaseRefund- from Customer IBAN-Online-->
+        <property name="2220-200000-261"
+                  value="addAdditionalDataNational,
+                  monitoring,
+                  workingDate,
+                  hostChannelLog,
+                  financialMsgRequest,
+                  requestNoGen,
+                  selectServiceDetail,
+                  checkDoneReconciliation,
+                  selectPan4Processing,
+                  getPanInfo,
+                  selectDestinationAccount,
+                  soroush,
+                  sendResponseWithCheckRequiredReverse"/>
+
+        <!--        PurchaseRefund-To Customer Card -Online-->
+        <property name="2220-200000-262"
+                  value="addAdditionalDataNational,
+                  monitoring,
+                  workingDate,
+                  hostChannelLog,
+                  financialMsgRequest,
+                  requestNoGen,
+                  selectServiceDetail,
+                  checkDoneReconciliation,
+                  selectPan4Processing,
+                  getPanInfo,
+                  selectDestinationAccount,
+                  soroush,
+                  sendResponseWithCheckRequiredReverse"/>
+
+        <!--        purchase With Initial Approval-->
+        <property name="2100-000000-101"
+                  value="addAdditionalDataNational,
+                  monitoring,
+                  workingDate,
+                  hostChannelLog,
+                  financialMsgRequest,
+                  selectTerminal,
+                  selectServiceDetail,
+                  requestNoGen,
+                  selectPan4Processing,
+                  getPanInfo,
+                  pinVerify,
+                  checkKahrobaTxConstraints,
+                  feeCalc,
+                  buy,
+                  sendResponseWithCheckRequiredReverse"/>
+
+        <!--        purchase With Substitute Approval-->
+        <property name="2100-000000-103"
+                  value="monitoring,
+                  workingDate,
+                  hostChannelLog,
+                  financialMsgRequest,
+                  requestNoGen,
+                  selectServiceDetail,
+                  selectPan4Processing,
+                  getPanInfo,
+                  pinVerify,
+                  feeCalc,
+                  substitutePurchaseApproval,
+                  sendResponseWithCheckRequiredReverse"/>
+
+        <!--        purchase With Initial Supplementary Approval -->
+        <property name="2100-000000-107"
+                  value="monitoring,
+                  workingDate,
+                  hostChannelLog,
+                  financialMsgRequest,
+                  requestNoGen,
+                  selectServiceDetail,
+                  selectPan4Processing,
+                  getPanInfo,
+                  pinVerify,
+                  feeCalc,
+                  supplementaryPurchaseApproval,
+                  sendResponseWithCheckRequiredReverse"/>
+
+
+        <!--        purchaseWith Approval Single Step All Amount-->
+        <property name="2200-000000-201"
+                  value="monitoring,
+                  workingDate,
+                  hostChannelLog,
+                  financialMsgRequest,
+                  requestNoGen,
+                  selectServiceDetail,
+                  selectPan4Processing,
+                  getPanInfo,
+                  feeCalc,
+                  purchaseWithApprovalSingleStep,
+                  sendResponseWithCheckRequiredReverse"/>
+
+        <!--        purchaseWith Approval Single Step All Amount-->
+        <property name="2201-000000-201"
+                  value="monitoring,
+                  workingDate,
+                  hostChannelLog,
+                  financialMsgRequest,
+                  requestNoGen,
+                  selectServiceDetail,
+                  selectPan4Processing,
+                  getPanInfo,
+                  feeCalc,
+                  purchaseWithApprovalSingleStep,
+                  sendResponseWithCheckRequiredReverse"/>
+
+
+        <!--        purchase With Approval Single Step Lower Amount-->
+        <property name="2200-000000-202"
+                  value="monitoring,
+                  workingDate,
+                  hostChannelLog,
+                  financialMsgRequest,
+                  requestNoGen,
+                  selectServiceDetail,
+                  selectPan4Processing,
+                  getPanInfo,
+                  feeCalc,
+                  purchaseWithApprovalSingleStep,
+                  sendResponseWithCheckRequiredReverse"/>
+
+        <!--       repeat purchase With Approval Single Step Lower Amount-->
+        <property name="2201-000000-202"
+                  value="monitoring,
+                  workingDate,
+                  hostChannelLog,
+                  financialMsgRequest,
+                  requestNoGen,
+                  selectServiceDetail,
+                  selectPan4Processing,
+                  getPanInfo,
+                  feeCalc,
+                  purchaseWithApprovalSingleStep,
+                  sendResponseWithCheckRequiredReverse"/>
+
+
+        <!--        purchase With Approval Multi Step Non Final-->
+        <property name="2200-000000-288"
+                  value="monitoring,
+                  workingDate,
+                  hostChannelLog,
+                  financialMsgRequest,
+                  requestNoGen,
+                  selectServiceDetail,
+                  selectPan4Processing,
+                  getPanInfo,
+                  feeCalc,
+                  purchaseWithApprovalMultiStep,
+                  sendResponseWithCheckRequiredReverse"/>
+
+        <!--        repeat purchase With Approval Multi Step Non Final-->
+        <property name="2201-000000-288"
+                  value="monitoring,
+                  workingDate,
+                  hostChannelLog,
+                  financialMsgRequest,
+                  requestNoGen,
+                  selectServiceDetail,
+                  selectPan4Processing,
+                  getPanInfo,
+                  feeCalc,
+                  purchaseWithApprovalMultiStep,
+                  sendResponseWithCheckRequiredReverse"/>
+        <!--        purchase With Approval Multi Step Final-->
+        <property name="2200-000000-289"
+                  value="monitoring,
+                  workingDate,
+                  hostChannelLog,
+                  financialMsgRequest,
+                  requestNoGen,
+                  selectServiceDetail,
+                  selectPan4Processing,
+                  getPanInfo,
+                  feeCalc,
+                  purchaseWithApprovalMultiStep,
+                  sendResponseWithCheckRequiredReverse"/>
+
+        <!--        repeat purchase With Approval Multi Step Final-->
+        <property name="2201-000000-289"
+                  value="monitoring,
+                  workingDate,
+                  hostChannelLog,
+                  financialMsgRequest,
+                  requestNoGen,
+                  selectServiceDetail,
+                  selectPan4Processing,
+                  getPanInfo,
+                  feeCalc,
+                  purchaseWithApprovalMultiStep,
+                  sendResponseWithCheckRequiredReverse"/>
+
+
+        <!--     reversal PurchaseWithApproval-Cancellation FromShetab-->
+        <!--  2100-ORIGINAL DATA ELEMENT     -->
+        <property name="2420-000000-420-2100"
+                  value="addAdditionalDataNational
+                  monitoring,
+                  workingDate,
+                  hostChannelLog,
+                  financialMsgRequest,
+                  cancelPurchaseApproval,
+                  sendResponse"/>
+
+        <property name="2220-900000-290"
+                  value="monitoring,
+                  workingDate,
+                  hostChannelLog,
+                  financialMsgRequest,
+                  requestNoGen,
+                  selectServiceDetail,
+                  checkExistOriginalRequest,
+                  checkDoneReconciliation,
+                  selectPan4Processing,
+                  getPanInfo,
+                  selectDestinationAccount,
+                  soroush,
+                  sendResponseWithCheckRequiredReverse"/>
+
+
+        <property name="2220-900000-291"
+                  value="monitoring,
+                  workingDate,
+                  hostChannelLog,
+                  financialMsgRequest,
+                  requestNoGen,
+                  selectServiceDetail,
+                  checkExistOriginalRequest,
+                  checkDoneReconciliation,
+                  selectPan4Processing,
+                  getPanInfo,
+                  selectDestinationAccount,
+                  soroush,
+                  sendResponseWithCheckRequiredReverse"/>
+
+        <property name="2220-900000-292"
+                  value="monitoring,
+                  workingDate,
+                  hostChannelLog,
+                  financialMsgRequest,
+                  requestNoGen,
+                  selectServiceDetail,
+                  checkExistOriginalRequest,
+                  checkDoneReconciliation,
+                  selectDestinationAccount,
+                  soroush,
+                  sendResponseWithCheckRequiredReverse"/>
+
+        <property name="2220-900000-293"
+                  value="monitoring,
+                  workingDate,
+                  hostChannelLog,
+                  financialMsgRequest,
+                  requestNoGen,
+                  selectServiceDetail,
+                  checkExistOriginalRequest,
+                  checkDoneReconciliation,
+                  selectDestinationAccount,
+                  soroush,
+                  sendResponseWithCheckRequiredReverse"/>
+
+        <property name="2220-900000-294"
+                  value="monitoring,
+                  workingDate,
+                  hostChannelLog,
+                  financialMsgRequest,
+                  requestNoGen,
+                  selectServiceDetail,
+                  checkDoneReconciliation,
+                  selectPan4Processing,
+                  getPanInfo,
+                  selectDestinationAccount,
+                  soroush,
+                  sendResponseWithCheckRequiredReverse"/>
+
+        <property name="2220-900000-295"
+                  value="monitoring,
+                  workingDate,
+                  hostChannelLog,
+                  financialMsgRequest,
+                  requestNoGen,
+                  selectServiceDetail,
+                  checkDoneReconciliation,
+                  selectPan4Processing,
+                  getPanInfo,
+                  selectDestinationAccount,
+                  soroush,
+                  sendResponseWithCheckRequiredReverse"/>
+
+
+        <property name="2220-900000-296"
+                  value="monitoring,
+                  workingDate,
+                  hostChannelLog,
+                  financialMsgRequest,
+                  requestNoGen,
+                  selectServiceDetail,
+                  checkDoneReconciliation,
+                  selectDestinationAccount,
+                  soroush,
+                  sendResponseWithCheckRequiredReverse"/>
+
+        <property name="2220-900000-297"
+                  value="monitoring,
+                  workingDate,
+                  hostChannelLog,
+                  financialMsgRequest,
+                  requestNoGen,
+                  selectServiceDetail,
+                  checkDoneReconciliation,
+                  selectDestinationAccount,
+                  soroush,
+                  sendResponseWithCheckRequiredReverse"/>
+
+
+        <!--        Buy Reverse-->
+        <property name="2420-000000-400"
+                  value="addAdditionalDataNational,
+                  monitoring,
+                  workingDate,
+                  hostChannelLog,
+                  financialMsgRequest,
+                  requestNoGen,
+                  reverseByRequestNo,
+                  sendResponse"/>
+
+        <!--        Payment Reverse-->
+        <property name="2420-500000-400"
+                  value="addAdditionalDataNational,
+                  monitoring,
+                  workingDate,
+                  hostChannelLog,
+                  financialMsgRequest,
+                  requestNoGen,
+                  reverseByRequestNo,
+                  sendResponse"/>
+
+        <!--        Payment Reverse-->
+        <property name="2420-010000-400"
+                  value="addAdditionalDataNational,
+                  monitoring,
+                  workingDate,
+                  hostChannelLog,
+                  financialMsgRequest,
+                  requestNoGen,
+                  reverseByRequestNo,
+                  sendResponse"/>
+
+
+        <!--        Cash Deposit Reverse-->
+        <property name="2420-210000-400"
+                  value="addAdditionalDataNational,
+                  monitoring,
+                  workingDate,
+                  hostChannelLog,
+                  financialMsgRequest,
+                  requestNoGen,
+                  reverseByRequestNo,
+                  sendResponse"/>
+
+        <!--        Transfer Reverse-->
+        <property name="2420-400000-400"
+                  value="addAdditionalDataNational,
+                  monitoring,
+                  workingDate,
+                  hostChannelLog,
+                  financialMsgRequest,
+                  requestNoGen,
+                  reverseByRequestNo,
+                  sendResponse"/>
+
+        <!--        Transfer Reverse-->
+        <property name="2420-400000-400"
+                  value="addAdditionalDataNational,
+                  monitoring,
+                  workingDate,
+                  hostChannelLog,
+                  financialMsgRequest,
+                  requestNoGen,
+                  reverseByRequestNo,
+                  sendResponse"/>
+
+        <!--        Transfer Reverse-->
+        <property name="2420-400000-495"
+                  value="addAdditionalDataNational,
+                  monitoring,
+                  workingDate,
+                  hostChannelLog,
+                  financialMsgRequest,
+                  requestNoGen,
+                  reverseByRequestNo,
+                  sendResponse"/>
+
+        <!--        Transfer Reverse-->
+        <property name="2420-4K0000-495"
+                  value="addAdditionalDataNational,
+                  monitoring,
+                  workingDate,
+                  hostChannelLog,
+                  financialMsgRequest,
+                  requestNoGen,
+                  reverseByRequestNo,
+                  sendResponse"/>
+
+        <!--        Transfer Reverse (Iban)-->
+        <property name="2420-4K0000-496"
+                  value="addAdditionalDataNational,
+                  monitoring,
+                  workingDate,
+                  hostChannelLog,
+                  financialMsgRequest,
+                  requestNoGen,
+                  reverseByRequestNo,
+                  sendResponse"/>
+
+
+
+        <!--        Transfer Reverse (Card)-->
+        <property name="2420-4L0000-400"
+                  value="addAdditionalDataNational,
+                  monitoring,
+                  workingDate,
+                  hostChannelLog,
+                  financialMsgRequest,
+                  requestNoGen,
+                  reverseByRequestNo,
+                  sendResponse"/>
+
+        <!--        Transfer Reverse (Iban)-->
+        <property name="2420-4L0000-497"
+                  value="addAdditionalDataNational,
+                  monitoring,
+                  workingDate,
+                  hostChannelLog,
+                  financialMsgRequest,
+                  requestNoGen,
+                  reverseByRequestNo,
+                  sendResponse"/>
+
+        <!-- reversal PurchaseRefundToCustomer from Shetab-->
+        <property name="2420-200000-400"
+                  value="monitoring,
+                  workingDate,
+                  hostChannelLog,
+                  financialMsgRequest,
+                  requestNoGen,
+                  reverseByRequestNo,
+                  sendResponse"/>
+
+        <!-- reversal PurchaseRefundFromAcquire from Shetab-->
+        <property name="2420-200000-494"
+                  value="monitoring,
+                  workingDate,
+                  hostChannelLog,
+                  financialMsgRequest,
+                  requestNoGen,
+                  reverseByRequestNo,
+                  sendResponse"/>
+
+
+
+
+
+
+
+
+
+
+
+    </participant>
+    <!--<group name="addAdditionalDataNational">
+        <participant class="com.misc.core.common.IssuerAdditionalDataNationalGenerator" logger="Q2">
+        </participant>
+    </group>
+    <group name="monitoring">
+        <participant class="com.misc.common.participant.Monitoring" logger="Q2"/>
+    </group>
+    <group name="cutoff">
+        &lt;!&ndash; <participant class="org.jpos.transaction.participant.CheckFields" logger="Q2">
+             <property name="mandatory" value="0,CARD,PCODE,4,7,11,12,17,19,22,24,26,27,32,35,37,TID,42,43,48,62,100,128"/>
+             <property name="optional" value="6,10"/>
+         </participant>&ndash;&gt;
+        &lt;!&ndash;<participant class="com.misc.brokeroker.BaseValidateMessage" logger="Q2"/>&ndash;&gt;
+        <participant class="com.misc.core.participant.cutoff.CheckChangedWorkingDate" logger="Q2"/>
+        <participant class="com.misc.core.participant.cutoff.LastRequestNoForCutoff" logger="Q2"/>
+        <participant class="com.misc.core.participant.cutoff.NakisaCutoffRequestCreator" logger="Q2">
+            <property name="deadLine-time" value="15000"/>
+        </participant>
+        <participant class="com.misc.core.participant.cutoff.NakisaChannelCutoffDetailPersistence" logger="Q2"/>
+        <participant class="com.misc.core.participant.cutoff.ShetabCutOff" logger="Q2">
+            <property name="timeout" value="15000"/>
+        </participant>
+        &lt;!&ndash;<participant class="com.misc.core.participant.cutoff.CutoffFinancialMsgResponseCreator" logger="Q2"/>&ndash;&gt;
+        <participant class="com.misc.core.participant.cutoff.PrepareCutoffResponse" logger="Q2"/>
+    </group>
+
+    <group name="selectServiceDetail">
+        <participant class="com.misc.core.participant.common.SelectServiceDetail" logger="Q2"/>
+    </group>
+
+    <group name="selectTerminal">
+        <participant class="com.misc.core.participant.common.SelectTerminal" logger="Q2"/>
+    </group>
+
+    <group name="workingDate">
+        <participant class="com.misc.core.participant.cutoff.WorkingDate" logger="Q2"/>
+    </group>
+
+    <group name="feeCalc">
+        <participant class="com.misc.core.participant.fee.FeeCalc" logger="Q2"/>
+    </group>
+
+    <group name="selectPan4Processing">
+        <participant class="com.misc.core.participant.common.SelectPanForProcessing" logger="Q2"/>
+    </group>
+    <group name="checkDoneReconciliation">
+        <participant class="com.misc.core.participant.soroush.CheckDoneReconciliation" logger="Q2"/>
+    </group>
+    <group name="checkKahrobaTxConstraints">
+        <participant class="com.misc.core.participant.common.CheckKahrobaTxConstraints" logger="Q2"/>
+    </group>
+    <group name="checkExistOriginalRequest">
+        <participant class="com.misc.core.participant.common.CheckExistOriginalRequest" logger="Q2"/>
+    </group>
+    <group name="soroush">
+        <participant class="com.misc.core.participant.soroush.NakisaSoroushRequestCreator" logger="Q2">
+            <property name="deadLine-time" value="15000"/>
+        </participant>
+        <participant class="com.misc.core.participant.soroush.NakisaChannelSoroushDetailPersistence" logger="Q2">
+        </participant>
+        <participant class="com.misc.core.participant.soroush.Soroush" logger="Q2">
+            <property name="timeout" value="15000"/>
+        </participant>
+        <participant class="com.misc.core.participant.soroush.SoroushFinancialMsgResponseCreator" logger="Q2"/>
+        <participant class="com.misc.core.participant.soroush.PrepareSoroushResponse" logger="Q2"/>
+    </group>
+
+    <group name="payment">
+        <participant class="com.misc.core.participant.common.RestrictionTransaction" logger="Q2"/>
+        <participant class="com.misc.core.participant.payment.NakisaPaymentRequestCreator" logger="Q2">
+            <property name="deadLine-time" value="15000"/>
+        </participant>
+        <participant class="com.misc.core.participant.payment.NakisaChannelPaymentDetailPersistence" logger="Q2">
+        </participant>
+        <participant class="com.misc.core.participant.payment.Payment" logger="Q2">
+            <property name="timeout" value="15000"/>
+        </participant>
+        <participant class="com.misc.core.participant.payment.PaymentFinancialMsgResponseCreator" logger="Q2"/>
+        <participant class="com.misc.core.participant.payment.PreparePaymentResponse" logger="Q2"/>
+    </group>
+
+    <group name="buyChargeTransferTo">
+        <participant class="com.misc.core.participant.transfer.charge.NakisaChargeTransferToRequestCreator" logger="Q2">
+            <property name="deadLine-time" value="50000"/>
+        </participant>
+        <participant class="com.misc.core.participant.transfer.charge.NakisaChannelChargeTransferToDetailPersistence"
+                     logger="Q2">
+        </participant>
+        <participant class="com.misc.core.participant.transfer.charge.BuyChargeTransfer" logger="Q2">
+            <property name="timeout" value="50000"/>
+        </participant>
+        <participant class="com.misc.core.participant.transfer.charge.ChargeTransferToFinancialMsgResponseCreator"
+                     logger="Q2"/>
+        <participant class="com.misc.core.participant.transfer.charge.PrepareChargeTransferToResponse" logger="Q2"/>
+    </group>
+
+    &lt;!&ndash; <group name="transferToNakisa">
+ &lt;!&ndash;        <participant class="com.misc.core.participant.common.RestrictionTransaction" logger="Q2"/>&ndash;&gt;
+         <participant class="com.misc.core.participant.payment.NakisaPaymentRequestCreator" logger="Q2">
+             <property name="deadLine-time" value="15000"/>
+         </participant>
+         <participant class="com.misc.core.participant.payment.NakisaChannelPaymentDetailPersistence" logger="Q2">
+         </participant>
+         <participant class="com.misc.core.participant.payment.Payment" logger="Q2">
+             <property name="timeout" value="15000"/>
+         </participant>
+         <participant class="com.misc.core.participant.payment.PaymentFinancialMsgResponseCreator" logger="Q2"/>
+         <participant class="com.misc.core.participant.payment.PreparePaymentResponse" logger="Q2"/>
+     </group>&ndash;&gt;
+
+    <group name="charge">
+        <participant class="com.misc.core.participant.charge.buy.MobileCharge" logger="Q2">
+            <property name="timeout" value="52000"/>
+        </participant>
+        <participant class="com.misc.core.participant.charge.buy.PrepareMobileChargeResponse" logger="Q2"/>
+    </group>
+
+    <group name="inquiryByTransactionId">
+        <participant class="com.misc.core.participant.charge.inquiry.transactionid.ChargeInquiryByTransactionId"
+                     logger="Q2">
+            <property name="timeout" value="15000"/>
+        </participant>
+        <participant
+                class="com.misc.core.participant.charge.inquiry.transactionid.PrepareInquiryChargeByTransactionIdResponse"
+                logger="Q2"/>
+    </group>
+
+    <group name="inquiryByTransactionIdAndTime">
+        <participant
+                class="com.misc.core.participant.charge.inquiry.transactionanddate.ChargeInquiryByTransactionIdAndDateTime"
+                logger="Q2">
+            <property name="timeout" value="15000"/>
+        </participant>
+        <participant
+                class="com.misc.core.participant.charge.inquiry.transactionanddate.PrepareInquiryChargeByTransactionIdAndDateTimeResponse"
+                logger="Q2"/>
+    </group>
+
+    <group name="buy">
+        <participant class="com.misc.core.participant.common.RestrictionTransaction" logger="Q2"/>
+        <participant class="com.misc.core.participant.buy.NakisaBuyRequestCreator" logger="Q2">
+            <property name="deadLine-time" value="15000"/>
+        </participant>
+        <participant class="com.misc.core.participant.buy.NakisaChannelBuyDetailPersistence" logger="Q2">
+        </participant>
+        <participant class="com.misc.core.participant.buy.Buy" logger="Q2">
+            <property name="timeout" value="15000"/>
+        </participant>
+        <participant class="com.misc.core.participant.buy.BuyFinancialMsgResponseCreator" logger="Q2"/>
+        <participant class="com.misc.core.participant.buy.PrepareBuyResponse" logger="Q2"/>
+    </group>
+
+    <group name="internalCash">
+        <participant class="com.misc.core.participant.common.RestrictionTransaction" logger="Q2"/>
+        <participant class="com.misc.core.participant.cash.internal.NakisaInternalCashRequestCreator" logger="Q2">
+            <property name="deadLine-time" value="15000"/>
+        </participant>
+        <participant class="com.misc.core.participant.cash.internal.NakisaChannelInternalCashDetailPersistence"
+                     logger="Q2">
+        </participant>
+        <participant class="com.misc.core.participant.cash.internal.InternalCash" logger="Q2">
+            <property name="timeout" value="15000"/>
+        </participant>
+        <participant class="com.misc.core.participant.cash.internal.InternalCashFinancialMsgResponseCreator"
+                     logger="Q2"/>
+        <participant class="com.misc.core.participant.cash.internal.PrepareInternalCashResponse" logger="Q2"/>
+    </group>
+
+    <group name="externalCash">
+        <participant class="com.misc.core.participant.common.RestrictionTransaction" logger="Q2"/>
+        <participant class="com.misc.core.participant.cash.external.NakisaExternalCashRequestCreator" logger="Q2">
+            <property name="deadLine-time" value="15000"/>
+        </participant>
+        <participant class="com.misc.core.participant.cash.external.NakisaChannelExternalCashDetailPersistence"
+                     logger="Q2">
+        </participant>
+        <participant class="com.misc.core.participant.cash.external.ExternalCash" logger="Q2">
+            <property name="timeout" value="15000"/>
+        </participant>
+        <participant class="com.misc.core.participant.cash.external.ExternalCashFinancialMsgResponseCreator"
+                     logger="Q2"/>
+        <participant class="com.misc.core.participant.cash.external.PrepareExternalCashResponse" logger="Q2"/>
+    </group>
+    <group name="reverseByRequestNo">
+        <participant class="com.misc.core.participant.reverse.byrequestno.NakisaReverseByRequestNoRequestCreator"
+                     logger="Q2">
+            <property name="deadLine-time" value="15000"/>
+        </participant>
+        <participant
+                class="com.misc.core.participant.reverse.byrequestno.NakisaChannelReverseByRequestNoDetailPersistence"
+                logger="Q2">
+        </participant>
+        <participant class="com.misc.core.participant.reverse.byrequestno.ReverseByRequestNo" logger="Q2">
+            <property name="timeout" value="15000"/>
+        </participant>
+        <participant class="com.misc.core.participant.reverse.byrequestno.ReverseByRequestNoFinancialMsgResponseCreator"
+                     logger="Q2"/>
+        <participant class="com.misc.core.participant.reverse.byrequestno.PrepareReverseResponse" logger="Q2"/>
+    </group>
+
+    <group name="transfer">
+        <participant class="com.misc.core.participant.common.RestrictionTransaction" logger="Q2"/>
+        <participant class="com.misc.core.participant.transfer.internal.NakisaTransferRequestCreator" logger="Q2">
+            <property name="deadLine-time" value="15000"/>
+        </participant>
+        <participant class="com.misc.core.participant.transfer.internal.NakisaChannelTransferDetailPersistence"
+                     logger="Q2">
+        </participant>
+        <participant class="com.misc.core.participant.transfer.Transfer" logger="Q2">
+            <property name="timeout" value="15000"/>
+        </participant>
+        <participant class="com.misc.core.participant.transfer.internal.TransferFinancialMsgResponseCreator"
+                     logger="Q2"/>
+        <participant class="com.misc.core.participant.transfer.internal.PrepareInternalTransferResponse" logger="Q2"/>
+    </group>
+    <group name="checkAmountLimitation">
+        <participant class="com.misc.core.participant.common.RestrictionTransaction" logger="Q2"/>
+    </group>
+    <group name="transferTo">
+        <participant class="com.misc.core.participant.transfer.to.NakisaTransferToRequestCreator" logger="Q2">
+            <property name="deadLine-time" value="15000"/>
+        </participant>
+        <participant class="com.misc.core.participant.transfer.to.NakisaChannelTransferToDetailPersistence" logger="Q2">
+        </participant>
+        <participant class="com.misc.core.participant.transfer.Transfer" logger="Q2">
+            <property name="timeout" value="15000"/>
+        </participant>
+        <participant class="com.misc.core.participant.transfer.to.TransferToFinancialMsgResponseCreator" logger="Q2"/>
+        <participant class="com.misc.core.participant.transfer.to.PrepareTransferToResponse" logger="Q2"/>
+    </group>
+
+    <group name="transferFrom">
+        <participant class="com.misc.core.participant.common.RestrictionTransaction" logger="Q2"/>
+        <participant class="com.misc.core.participant.transfer.from.NakisaTransferFromRequestCreator" logger="Q2">
+            <property name="deadLine-time" value="15000"/>
+        </participant>
+        <participant class="com.misc.core.participant.transfer.from.NakisaChannelTransferFromDetailPersistence"
+                     logger="Q2">
+        </participant>
+        <participant class="com.misc.core.participant.transfer.Transfer" logger="Q2">
+            <property name="timeout" value="15000"/>
+        </participant>
+        <participant class="com.misc.core.participant.transfer.from.TransferFromFinancialMsgResponseCreator"
+                     logger="Q2"/>
+        <participant class="com.misc.core.participant.transfer.from.PrepareInternalTransferFromResponse" logger="Q2"/>
+    </group>
+
+    <group name="transferVerification">
+        <participant class="com.misc.core.participant.transfer.verification.BehdadVerification" logger="Q2"/>
+        <participant
+                class="com.misc.core.participant.transfer.verification.TransferVerificationFinancialMsgResponseCreator"
+                logger="Q2"/>
+        <participant class="com.misc.core.participant.transfer.verification.PrepareTransferVerificationResponse"
+                     logger="Q2"/>
+    </group>
+
+    <group name="transferVerificationV2">
+        <participant class="com.misc.core.participant.transfer.verification.BehdadVerification" logger="Q2"/>
+        <participant
+                class="com.misc.core.participant.transfer.verification.TransferVerificationFinancialMsgResponseCreator"
+                logger="Q2"/>
+        <participant class="com.misc.core.participant.transfer.verification.PrepareTransferVerificationResponseV2"
+                     logger="Q2"/>
+    </group>
+
+    <group name="fee">
+        <participant class="com.misc.core.participant.fee.NakisaFeeRequestCreator" logger="Q2">
+            <property name="deadLine-time" value="15000"/>
+        </participant>
+        <participant class="com.misc.core.participant.fee.NakisaChannelFeeDetailPersistence" logger="Q2">
+        </participant>
+        <participant class="com.misc.core.participant.fee.Fee" logger="Q2">
+            <property name="timeout" value="15000"/>
+        </participant>
+        <participant class="com.misc.core.participant.fee.FeeFinancialMsgResponseCreator" logger="Q2"/>
+    </group>
+
+    <group name="statement">
+        <participant class="com.misc.core.participant.statement.NakisaStatementRequestCreator" logger="Q2">
+            <property name="deadLine-time" value="15000"/>
+        </participant>
+        <participant class="com.misc.core.participant.statement.NakisaChannelStatementDetailPersistence" logger="Q2">
+        </participant>
+        <participant class="com.misc.core.participant.statement.Statement" logger="Q2">
+            <property name="timeout" value="15000"/>
+        </participant>
+        <participant class="com.misc.core.participant.statement.StatementFinancialMsgResponseCreator" logger="Q2"/>
+        <participant class="com.misc.core.participant.statement.PrepareStatementResponse" logger="Q2"/>
+    </group>
+
+    <group name="balance">
+        <participant class="com.misc.core.participant.balance.NakisaBalanceRequestCreator" logger="Q2">
+            <property name="deadLine-time" value="15000"/>
+        </participant>
+        <participant class="com.misc.core.participant.balance.NakisaChannelBalanceDetailPersistence" logger="Q2">
+        </participant>
+        <participant class="com.misc.core.participant.balance.BalanceInquiry" logger="Q2">
+            <property name="timeout" value="15000"/>
+        </participant>
+        <participant class="com.misc.core.participant.balance.BalanceFinancialMsgResponseCreator" logger="Q2"/>
+        <participant class="com.misc.core.participant.balance.PrepareBalanceResponse" logger="Q2"/>
+    </group>
+
+    <group name="changePin1">
+        <participant class="com.misc.core.participant.cms.ValidatePan" logger="Q2"/>
+        <participant class="com.misc.core.participant.cms.changepin1.NakisaChangePin1RequestCreator"
+                     logger="Q2">
+            <property name="deadLine-time" value="15000"/>
+        </participant>
+        <participant class="com.misc.core.participant.cms.ChangePin1" logger="Q2">
+            <property name="timeout" value="15000"/>
+        </participant>
+        <participant class="com.misc.core.participant.cms.changepin1.ChangePin1FinancialMsgResponseCreator"
+                     logger="Q2"/>
+        <participant class="com.misc.core.participant.cms.changepin1.PrepareChangePin1Response"
+                     logger="Q2"/>
+    </group>
+
+    <group name="changePin2">
+        <participant class="com.misc.core.participant.cms.ValidatePan" logger="Q2"/>
+        <participant class="com.misc.core.participant.cms.changepin2.NakisaChangePin2RequestCreator" logger="Q2">
+            <property name="deadLine-time" value="15000"/>
+        </participant>
+        <participant class="com.misc.core.participant.cms.ChangePin2" logger="Q2">
+            <property name="timeout" value="15000"/>
+        </participant>
+        <participant class="com.misc.core.participant.cms.changepin2.ChangePin2FinancialMsgResponseCreator"
+                     logger="Q2"/>
+        <participant class="com.misc.core.participant.cms.changepin2.PrepareChangePin2Response" logger="Q2"/>
+    </group>
+
+    <group name="checkFields">
+        <participant class="org.jpos.transaction.participant.CheckFields" logger="Q2">
+            <property name="mandatory"
+                      value="0,CARD,PCODE,4,7,11,12,17,19,22,24,26,27,32,35,37,TID,42,43,48,62,100,128"/>
+            <property name="optional" value="6,10"/>
+        </participant>
+    </group>
+
+    <group name="checkValidate">
+        <participant class="com.misc.common.participant.MACValidator" logger="Q2"/>
+        <participant class="com.misc.common.participant.BINValidator" logger="Q2"/>
+        <participant class="com.misc.common.participant.WorkingDateValidator" logger="Q2"/>
+        <participant class="com.misc.common.participant.TransactionAllow" logger="Q2"/>
+    </group>
+
+    <group name="hostChannelLog">
+        <participant class="com.misc.core.participant.common.PersistHostChannel" logger="Q2">
+            <property name="channel-id" value="9"/>
+            <property name="channel-type" value="1"/>
+        </participant>
+    </group>
+
+    <group name="requestNoGen">
+        <participant class="com.misc.core.participant.common.NakisaRequestNoGenerator" logger="Q2"/>
+    </group>
+
+    <group name="pinVerify">
+        <participant class="com.misc.core.participant.cms.ValidatePan" logger="Q2"/>
+        <participant class="com.misc.core.participant.cms.PinVerify" logger="Q2">
+            <property name="timeout" value="15000"/>
+        </participant>
+    </group>
+
+    <group name="getPanInfo">
+        <participant class="com.misc.core.participant.cms.PanInfo" logger="Q2">
+            <property name="timeout" value="15000"/>
+        </participant>
+    </group>
+
+    <group name="selectDestinationAccount">
+        <participant class="com.misc.core.participant.select.dst.SelectDestinationAccount" logger="Q2">
+            <property name="timeout" value="15000"/>
+        </participant>
+    </group>
+
+    <group name="financialMsgRequest">
+        <participant class="com.misc.core.participant.common.FinancialMsgRequestCreator" logger="Q2"/>
+    </group>
+
+    <group name="prepareResponse">
+        <participant class="com.misc.core.participant.common.PrepareResponse" logger="Q2"/>
+    </group>
+
+    <group name="sendResponseWithCheckRequiredReverse">
+        <participant class="com.misc.core.participant.common.SendResponseWithCheckRequiredReverse" logger="Q2"/>
+    </group>
+    <group name="sendResponse">
+        <participant class="com.misc.core.participant.common.ResponseSend" logger="Q2"/>
+    </group>
+
+    <group name="mobileChargeCheckRequiredReversal">
+        <participant class="com.misc.core.participant.common.MobileChargeCheckRequiredReversal" logger="Q2"/>
+    </group>
+
+    <group name="KeyExchange">
+        &lt;!&ndash; <participant class="org.jpos.transaction.participant.CheckFields" logger="Q2">
+             <property name="mandatory" value="0,CARD,PCODE,4,7,11,12,17,19,22,24,26,27,32,35,37,TID,42,43,48,62,100,128"/>
+             <property name="optional" value="6,10"/>
+         </participant>&ndash;&gt;
+        &lt;!&ndash;<participant class="com.misc.brokeroker.BaseValidateMessage" logger="Q2"/>&ndash;&gt;
+        <participant class="com.misc.core.participant.networkmanagement.KeyExchange" logger="Q2"/>
+        <participant class="com.misc.core.participant.common.ResponseSend" logger="Q2"/>
+    </group>
+
+    <group name="SignOn">
+        &lt;!&ndash; <participant class="org.jpos.transaction.participant.CheckFields" logger="Q2">
+             <property name="mandatory" value="0,CARD,PCODE,4,7,11,12,17,19,22,24,26,27,32,35,37,TID,42,43,48,62,100,128"/>
+             <property name="optional" value="6,10"/>
+         </participant>&ndash;&gt;
+        &lt;!&ndash;<participant class="com.misc.brokeroker.BaseValidateMessage" logger="Q2"/>&ndash;&gt;
+        <participant class="com.misc.core.participant.networkmanagement.SignOn" logger="Q2"/>
+        <participant class="com.misc.core.participant.common.ResponseSend" logger="Q2"/>
+    </group>
+
+
+    <group name="SignOff">
+        &lt;!&ndash; <participant class="org.jpos.transaction.participant.CheckFields" logger="Q2">
+             <property name="mandatory" value="0,CARD,PCODE,4,7,11,12,17,19,22,24,26,27,32,35,37,TID,42,43,48,62,100,128"/>
+             <property name="optional" value="6,10"/>
+         </participant>&ndash;&gt;
+        &lt;!&ndash;<participant class="com.misc.brokeroker.BaseValidateMessage" logger="Q2"/>&ndash;&gt;
+        <participant class="com.misc.core.participant.networkmanagement.SignOff" logger="Q2"/>
+        <participant class="com.misc.core.participant.common.ResponseSend" logger="Q2"/>
+    </group>
+
+    <group name="EchoTest">
+        &lt;!&ndash; <participant class="org.jpos.transaction.participant.CheckFields" logger="Q2">
+             <property name="mandatory" value="0,CARD,PCODE,4,7,11,12,17,19,22,24,26,27,32,35,37,TID,42,43,48,62,100,128"/>
+             <property name="optional" value="6,10"/>
+         </participant>&ndash;&gt;
+        &lt;!&ndash;<participant class="com.misc.brokeroker.BaseValidateMessage" logger="Q2"/>&ndash;&gt;
+        <participant class="com.misc.core.participant.networkmanagement.EchoTest" logger="Q2"/>
+        <participant class="com.misc.core.participant.common.ResponseSend" logger="Q2"/>
+    </group>
+
+    <group name="getSrcAccounts">
+        <participant class="com.misc.core.participant.cms.accounts.GetSourceAccounts" logger="Q2">
+            <property name="deadLine-time" value="15000"/>
+        </participant>
+        <participant class="com.misc.core.participant.cms.accounts.GetAccounts2FinancialMsgResponseCreator"
+                     logger="Q2"/>
+        <participant class="com.misc.core.participant.cms.accounts.PrepareGetAccounts2Response" logger="Q2"/>
+    </group>
+
+    <group name="getCardAccounts">
+        <participant class="com.misc.core.participant.cms.card.GetCardAccountsByCardNumber" logger="Q2"/>
+        <participant class="com.misc.core.participant.cms.card.PrepareGetCardAccountsResponse" logger="Q2"/>
+    </group>
+
+    <group name="activatedDynamicPin">
+        <participant class="com.misc.core.participant.cms.harim.ActiveDynamicPin" logger="Q2"/>
+        <participant class="com.misc.core.participant.cms.harim.PrepareActiveDynamicPinResponse" logger="Q2"/>
+    </group>
+
+    <group name="deactivatedDynamicPin">
+        <participant class="com.misc.core.participant.cms.harim.DeactivateDynamicPin" logger="Q2"/>
+        <participant class="com.misc.core.participant.cms.harim.PrepareDeactivateDynamicPinResponse" logger="Q2"/>
+    </group>
+
+    <group name="getCustomerInfoByPan">
+        <participant class="com.misc.core.participant.cms.accounts.GetCustomerInfoByPan" logger="Q2"/>
+    </group>
+    <group name="cardHolderAuthentication">
+        <participant class="com.misc.core.participant.shaparak.CardHolderAuthentication" logger="Q2"/>
+    </group>
+    <group name="inquireMobileNumberAndDynamicPin">
+        <participant class="com.misc.core.participant.cms.inquiredynamicpin.InquiryMobileNoAndDynamicPin" logger="Q2"/>
+    </group>
+
+    <group name="inquireDeactivateDynamicPinResponse">
+        <participant class="com.misc.core.participant.cms.inquiredynamicpin.InquiryDeactivateDynamicPin" logger="Q2"/>
+    </group>
+
+
+    <group name="checkCustomerInfoForDynamicPin2">
+        <participant class="com.misc.core.participant.cms.dynamicpin2.CheckCustomerInfoForDynamicPin2" logger="Q2"/>
+    </group>
+
+    <group name="getCustomerInfoByOTP">
+        <participant class="com.misc.core.participant.cms.accounts.GetPersonInfoByNationalCode" logger="Q2"/>
+        <participant class="com.misc.core.participant.cms.accounts.GetCustomerInfo" logger="Q2"/>
+    </group>
+    <group name="changeStatusAccountSms">
+        <participant class="com.misc.core.participant.sms.ChangeStatusAccountSms" logger="Q2"/>
+        <participant class="com.misc.core.participant.sms.PrepareChangeStatusAccountSmsResponse" logger="Q2"/>
+    </group>
+
+    <group name="verifyOtp">
+        <participant class="com.misc.core.participant.otp.OtpVerify" logger="Q2"/>
+    </group>
+
+    <group name="generateOtp">
+        <participant class="com.misc.core.participant.otp.GetPersonPhoneNumberForSMS" logger="Q2"/>
+        <participant class="com.misc.core.participant.otp.GenerateOtp" logger="Q2"/>
+        <participant class="com.misc.core.participant.sms.SendSMS" logger="Q2"/>
+        <participant class="com.misc.core.participant.sms.PrepareSendSmsResponse" logger="Q2"/>
+    </group>
+
+    <group name="checkViolationSecurity">
+        <participant class="com.misc.core.participant.common.CheckViolationSecurity" logger="Q2"/>
+    </group>
+
+    <group name="signActivePan">
+        <participant class="com.misc.core.participant.hamon.SignatureStatusHamon" logger="Q2"/>
+        <participant class="com.misc.core.participant.hamon.ValidateSignature" logger="Q2"/>
+    </group>
+    <group name="validateAccountToAccountHamonStatus">
+        <participant class="com.misc.core.participant.hamon.SignatureStatusHamonAccontToAccount" logger="Q2"/>
+        <participant class="com.misc.core.participant.hamon.ValidateHamonStatus" logger="Q2"/>
+    </group>
+    <group name="getPansByHamon">
+        <participant class="com.misc.core.participant.cms.accounts.GetPersonInfoByNationalCode" logger="Q2"/>
+        <participant class="com.misc.core.participant.cms.accounts.GetCustomerInfo" logger="Q2"/>
+    </group>
+
+    <group name="activePan">
+        <participant class="com.misc.core.participant.hamon.pan.ActivePan" logger="Q2"/>
+        <participant class="com.misc.core.participant.hamon.pan.PrepareActivePanResponse" logger="Q2"/>
+    </group>
+
+    <group name="deactivePan">
+        <participant class="com.misc.core.participant.hamon.pan.DeactivePan" logger="Q2"/>
+        <participant class="com.misc.core.participant.hamon.pan.PrepareDeactivePanResponse" logger="Q2"/>
+    </group>
+
+    <group name="activeInternetBank">
+        <participant class="com.misc.core.participant.hamon.internetbank.ActiveInternetBank" logger="Q2"/>
+        <participant class="com.misc.core.participant.hamon.internetbank.PrepareActiveInternetBankResponse"
+                     logger="Q2"/>
+    </group>
+
+    <group name="deactiveInternetBank">
+        <participant class="com.misc.core.participant.hamon.internetbank.DeactiveInternetBank" logger="Q2"/>
+        <participant class="com.misc.core.participant.hamon.internetbank.PrepareDeactiveInternetBankResponse"
+                     logger="Q2"/>
+    </group>
+
+    <group name="registerInternetBank">
+        <participant class="com.misc.core.participant.hamon.internetbank.RegisterInternetBank" logger="Q2"/>
+        <participant class="com.misc.core.participant.hamon.internetbank.PrepareRegisterInternetBankResponse"
+                     logger="Q2"/>
+    </group>
+
+    <group name="activeTelephoneBank">
+        <participant class="com.misc.core.participant.hamon.telephonebank.ActiveTelephoneBank" logger="Q2"/>
+        <participant class="com.misc.core.participant.hamon.telephonebank.PrepareActiveTelephoneBankResponse"
+                     logger="Q2"/>
+    </group>
+
+    <group name="deactiveTelephoneBank">
+        <participant class="com.misc.core.participant.hamon.telephonebank.DeactiveTelephoneBank" logger="Q2"/>
+        <participant class="com.misc.core.participant.hamon.telephonebank.PrepareDeactiveTelephoneBankResponse"
+                     logger="Q2"/>
+    </group>
+
+    <group name="changeMobileNo">
+        <participant class="com.misc.core.participant.hamon.mobile.ChangeMobileNo" logger="Q2"/>
+        <participant class="com.misc.core.participant.hamon.mobile.PrepareChangeMobileNoResponse" logger="Q2"/>
+    </group>
+
+    <group name="registerMobileNo">
+        <participant class="com.misc.core.participant.hamon.mobile.RegisterMobileNo" logger="Q2"/>
+        <participant class="com.misc.core.participant.hamon.mobile.PrepareRegisterMobileNoResponse" logger="Q2"/>
+    </group>
+
+    <group name="issuePan">
+        <participant class="com.misc.core.participant.hamon.pan.IssuePan" logger="Q2"/>
+        <participant class="com.misc.core.participant.hamon.pan.PrepareIssuePanResponse" logger="Q2"/>
+    </group>
+
+
+    <group name="reissuePan">
+        <participant class="com.misc.core.participant.hamon.pan.NakisaRequestReissuePanRequestCreator" logger="Q2">
+            <property name="deadLine-time" value="15000"/>
+        </participant>
+        <participant class="com.misc.core.participant.hamon.pan.NakisaChannelRequestReissuePanDetailPersistence"
+                     logger="Q2">
+        </participant>
+        <participant class="com.misc.core.participant.hamon.pan.RequestReissuePan" logger="Q2">
+            <property name="timeout" value="15000"/>
+        </participant>
+        <participant class="com.misc.core.participant.hamon.pan.PrepareRequestReissuePanResponse" logger="Q2"/>
+    </group>
+
+    <group name="reissuePanAcknowledge">
+        <participant class="com.misc.core.participant.hamon.pan.NakisaReissuePanAcknowledgeRequestCreator" logger="Q2">
+            <property name="deadLine-time" value="15000"/>
+        </participant>
+        <participant class="com.misc.core.participant.hamon.pan.NakisaChannelReissuePanAcknowledgeDetailPersistence"
+                     logger="Q2">
+        </participant>
+        <participant class="com.misc.core.participant.hamon.pan.ReissuePanAcknowledge" logger="Q2">
+            <property name="timeout" value="15000"/>
+        </participant>
+        <participant class="com.misc.core.participant.hamon.pan.PrepareReissuePanAcknowledgeResponse" logger="Q2"/>
+    </group>
+
+    <group name="sayahInquiryIsOwner">
+        <participant class="com.misc.core.participant.sayah.SayahInquiryIsOwner" logger="Q2"/>
+    </group>
+
+    <group name="requestHamon">
+        <participant class="com.misc.core.participant.hamon.RequestHamon" logger="Q2"/>
+        <participant class="com.misc.core.participant.hamon.PrepareRequestHamonResponse" logger="Q2"/>
+    </group>
+
+    <group name="requestHamonَAccountToAccount">
+        <participant class="com.misc.core.participant.hamon.RequestHamon" logger="Q2"/>
+    </group>
+    <group name="validatePanWithoutTrack2">
+        <participant class="com.misc.core.participant.cms.ValidatePan" logger="Q2">
+            <property name="checkTrack2ExpireDate" value="false"/>
+        </participant>
+    </group>
+
+    <group name="issueGiftCard">
+        <participant class="com.misc.core.participant.giftcard.CheckValidateIssueGiftCard" logger="Q2"/>
+        <participant class="com.misc.core.participant.giftcard.NakisaIssueGiftCardRequestCreator" logger="Q2">
+            <property name="deadLine-time" value="15000"/>
+        </participant>
+        <participant class="com.misc.core.participant.giftcard.NakisaChannelGiftCardDetailPersistence"
+                     logger="Q2">
+        </participant>
+        <participant class="com.misc.core.participant.giftcard.IssueGiftCard" logger="Q2">
+            <property name="timeout" value="15000"/>
+        </participant>
+        <participant class="com.misc.core.participant.giftcard.PrepareIssueGiftCardResponse" logger="Q2"/>
+    </group>
+
+
+    <group name="deactivateStaticPin2">
+        <participant class="com.misc.core.participant.cms.ValidatePan" logger="Q2"/>
+        <participant class="com.misc.core.participant.cms.deactivatestaticpin2.DeactivateStaticPin2RequestCreator"
+                     logger="Q2">
+            <property name="deadLine-time" value="15000"/>
+        </participant>
+        <participant class="com.misc.core.participant.cms.deactivatestaticpin2.DeactivateStaticPin2" logger="Q2">
+            <property name="timeout" value="15000"/>
+        </participant>
+        <participant
+                class="com.misc.core.participant.cms.deactivatestaticpin2.DeactivateStaticPin2FinancialMsgResponseCreator"
+                logger="Q2"/>
+        <participant class="com.misc.core.participant.cms.deactivatestaticpin2.PrepareDeactivateStaticPin2Response"
+                     logger="Q2"/>
+    </group>
+
+    <group name="getAccountInfoByAccountNumber">
+        <participant class="com.misc.core.participant.cms.accounts.GetAccountInfoByAccountNumber" logger="Q2"/>
+        <participant class="com.misc.core.participant.cms.accounts.PrepareGetAccountInfoByAccountNumberResponse"
+                     logger="Q2"/>
+    </group>
+
+    <group name="getAccountInfoByIbanForVerification">
+        <participant class="com.misc.core.participant.cms.iban.GetIbanInfo" logger="Q2">
+            <property name="deadLine-time" value="15000"/>
+        </participant>
+        <participant class="com.misc.core.participant.cms.iban.PrepareIbanInfoResponse"
+                     logger="Q2"/>
+    </group>
+
+    <group name="cashDepositVerification">
+        <participant
+                class="com.misc.core.participant.depositcash.verification.NakisaCashDepositVerificationRequestCreator"
+                logger="Q2">
+            <property name="deadLine-time" value="15000"/>
+        </participant>
+        <participant
+                class="com.misc.core.participant.depositcash.verification.NakisaCashDepositVerificationDetailPersistence"
+                logger="Q2"/>
+        <participant class="com.misc.core.participant.depositcash.verification.GetCashDepositVerification" logger="Q2"/>
+        <participant
+                class="com.misc.core.participant.depositcash.verification.CashDepositVerificationFinancialMsgResponseCreator"
+                logger="Q2"/>
+        <participant
+                class="com.misc.core.participant.depositcash.verification.PrepareGetCashDepositVerificationResponse"
+                logger="Q2"/>
+    </group>
+
+    <group name="cashDepositConfirmation">
+        <participant class="com.misc.core.participant.depositcash.confirm.NakisaCashDepositConfirmationRequestCreator"
+                     logger="Q2">
+            <property name="deadLine-time" value="15000"/>
+        </participant>
+        <participant
+                class="com.misc.core.participant.depositcash.confirm.NakisaCashDepositConfirmationDetailPersistence"
+                logger="Q2"/>
+        <participant class="com.misc.core.participant.depositcash.confirm.GetCashDepositConfirmation" logger="Q2"/>
+        <participant
+                class="com.misc.core.participant.depositcash.confirm.CashDepositConfirmationFinancialMsgResponseCreator"
+                logger="Q2"/>
+        <participant class="com.misc.core.participant.depositcash.confirm.PrepareGetCashDepositConfirmationResponse"
+                     logger="Q2"/>
+    </group>
+
+
+    <group name="accountToAccountVerify">
+        <participant class="com.misc.core.participant.cms.accounts.GetAccountInfoByAccountNumberForVerification"
+                     logger="Q2"/>
+        <participant class="com.misc.core.participant.cms.accounts.PrepareGetAccountInfoByAccountNumberResponse"
+                     logger="Q2"/>
+        <participant
+                class="com.misc.core.participant.transfer.verification.account.TransferAccountToAccountVerificationFinancialMsgResponseCreator"
+                logger="Q2"/>
+        <participant
+                class="com.misc.core.participant.transfer.verification.account.PrepareTransferAccountToAccountVerificationResponse"
+                logger="Q2"/>
+    </group>
+
+    <group name="getAccountInfoByAccountNumberForVerification">
+        <participant class="com.misc.core.participant.cms.accounts.GetAccountInfoByAccountNumberForVerification"
+                     logger="Q2"/>
+        <participant class="com.misc.core.participant.cms.accounts.PrepareGetAccountInfoByAccountNumberResponse"
+                     logger="Q2"/>
+    </group>
+
+    <group name="behdadVerificationAccount">
+        <participant
+                class="com.misc.core.participant.transfer.verification.account.BehdadVerificationForAccountToAccount"
+                logger="Q2"/>
+    </group>
+
+    <group name="accountToIbanVerify">
+        <participant
+                class="com.misc.core.participant.transfer.verification.iban.VerificationAccountToIbanFinancialMsgResponseCreator"
+                logger="Q2">
+            <property name="deadLine-time" value="15000"/>
+        </participant>
+        <participant
+                class="com.misc.core.participant.transfer.verification.iban.PrepareTransferAccountToIbanVerificationResponse"
+                logger="Q2"/>
+    </group>
+
+    &lt;!&ndash;  <group name="transfer">
+          <participant class="com.misc.core.participant.common.RestrictionTransaction" logger="Q2"/>
+          <participant class="com.misc.core.participant.transfer.internal.NakisaTransferRequestCreator" logger="Q2">
+              <property name="deadLine-time" value="15000"/>
+          </participant>
+          <participant class="com.misc.core.participant.transfer.internal.NakisaChannelTransferDetailPersistence"
+                       logger="Q2">
+          </participant>
+          <participant class="com.misc.core.participant.transfer.Transfer" logger="Q2">
+              <property name="timeout" value="15000"/>
+          </participant>
+          <participant class="com.misc.core.participant.transfer.internal.TransferFinancialMsgResponseCreator"
+                       logger="Q2"/>
+          <participant class="com.misc.core.participant.transfer.internal.PrepareInternalTransferResponse" logger="Q2"/>
+      </group>&ndash;&gt;
+
+    <group name="accountToAccountTransfer">
+        <participant class="com.misc.core.participant.transfer.account.internal.NakisaAccountToAccountRequestCreator"
+                     logger="Q2">
+            <property name="deadLine-time" value="15000"/>
+        </participant>
+        <participant class="com.misc.core.participant.transfer.account.internal.NakisaAccountToAccountDetailPersistence"
+                     logger="Q2"/>
+        <participant class="com.misc.core.participant.transfer.account.internal.TransferAccountToAccount" logger="Q2"/>
+        <participant
+                class="com.misc.core.participant.transfer.account.internal.AccountToAccountFinancialMsgResponseCreator"
+                logger="Q2"/>
+        <participant class="com.misc.core.participant.transfer.account.internal.PrepareAccountToAccountResponse"
+                     logger="Q2"/>
+    </group>
+
+    <group name="accountToIbanSatnaTransfer">
+        <participant
+                class="com.misc.core.participant.transfer.account.iban.satna.NakisaAccountToIbanSatnaRequestCreator"
+                logger="Q2">
+            <property name="deadLine-time" value="15000"/>
+        </participant>
+        <participant
+                class="com.misc.core.participant.transfer.account.iban.satna.NakisaAccountToIbanSatnaDetailPersistence"
+                logger="Q2"/>
+        <participant class="com.misc.core.participant.transfer.account.iban.satna.TransferAccountToIbanSatna"
+                     logger="Q2"/>
+        <participant
+                class="com.misc.core.participant.transfer.account.iban.satna.AccountToIbanSatnaFinancialMsgResponseCreator"
+                logger="Q2"/>
+        <participant class="com.misc.core.participant.transfer.account.iban.satna.PrepareAccountToIbanSatnaResponse"
+                     logger="Q2"/>
+    </group>
+
+    <group name="accountToIbanPayaTransfer">
+        <participant class="com.misc.core.participant.transfer.account.iban.paya.NakisaAccountToIbanPayaRequestCreator"
+                     logger="Q2">
+            <property name="deadLine-time" value="15000"/>
+        </participant>
+        <participant
+                class="com.misc.core.participant.transfer.account.iban.paya.NakisaAccountToIbanPayaDetailPersistence"
+                logger="Q2"/>
+        <participant class="com.misc.core.participant.transfer.account.iban.paya.TransferAccountToIbanPaya"
+                     logger="Q2"/>
+        <participant
+                class="com.misc.core.participant.transfer.account.iban.paya.AccountToIbanPayaFinancialMsgResponseCreator"
+                logger="Q2"/>
+        <participant class="com.misc.core.participant.transfer.account.iban.paya.PrepareAccountToIbanPayaResponse"
+                     logger="Q2"/>
+    </group>
+    <group name="accountToIbanPolTransfer">
+        <participant class="com.misc.core.participant.transfer.account.iban.pol.NakisaAccountToIbanPolRequestCreator"
+                     logger="Q2">
+            <property name="deadLine-time" value="15000"/>
+        </participant>
+        <participant class="com.misc.core.participant.transfer.account.iban.pol.NakisaAccountToIbanPolDetailPersistence"
+                     logger="Q2"/>
+        <participant class="com.misc.core.participant.transfer.account.iban.pol.TransferAccountToIbanPol" logger="Q2"/>
+        <participant
+                class="com.misc.core.participant.transfer.account.iban.pol.AccountToIbanPolFinancialMsgResponseCreator"
+                logger="Q2"/>
+        <participant class="com.misc.core.participant.transfer.account.iban.pol.PrepareAccountToIbanPolResponse"
+                     logger="Q2"/>
+    </group>-->
+
+
+</txnmgr>

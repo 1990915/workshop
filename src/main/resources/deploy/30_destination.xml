@@ -1,0 +1,15 @@
+<channel-adaptor name="client-adaptor" class="org.jpos.q2.iso.ChannelAdaptor" logger="Q2">
+	
+	<channel class="org.jpos.iso.channel.ASCIIChannel" packager="org.jpos.iso.packager.GenericPackager" logger="Q2">
+		<property name="packager-config" value="config/iso2003AsciiPackager.xml" />
+		<!-- Server A Address -->
+		<property name="host" value="127.0.0.1"/>
+		<property name="port" value="10001"/>
+		<property name="timeout" value="36000000"/>
+		<property name="connect-timeout" value="10000"/>
+	</channel>
+	
+	<in>client-send</in>
+	<out>client-receive</out>
+	<reconnect-delay>5000</reconnect-delay>
+</channel-adaptor>
