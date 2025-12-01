@@ -16,7 +16,7 @@ public class Starter {
         SpringApplication.run(Starter.class, args);
         Q2 q2 = new Q2(ResourceUtils.getFile("classpath:deploy").getAbsolutePath());
         q2.start();
-        Logger.log(new LogEvent("CardIran Channel is Started Successfully."));
-        System.out.println("CardIran Channel  is Started Successfully ...");
+        Logger.log(new LogEvent("Yooz Channel is Started Successfully."));
+        System.out.println("Yooz Channel  is Started Successfully ...");
     }
 }
