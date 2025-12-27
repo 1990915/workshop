@@ -1,24 +1,25 @@
 package com.misc.controller;
 
-import com.misc.service.PersonService;
+import com.misc.service.SumService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/")
-public class PersonController {
+public class SumController {
 
-    private final PersonService personService;
+    private final SumService sumService;
 
-    public PersonController(PersonService personService) {
-        this.personService = personService;
+    public SumController(SumService sumService) {
+        this.sumService = sumService;
     }
 
-    @GetMapping("/purchase")
+    @GetMapping("/sum")
     public void hiController() {
         System.out.println("Started ...");
-        personService.savePerson();
+        int sum = sumService.sum(null, 20);
+        System.out.println("sum=" + sum);
         System.out.println("Finished");
     }
 }
