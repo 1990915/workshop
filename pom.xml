@@ -62,6 +62,25 @@
     <build>
         <plugins>
             <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <configuration>
+                    <excludes>
+                        <exclude>deploy/**</exclude>
+                    </excludes>
+                    <archive>
+                        <manifest>
+                            <addClasspath>true</addClasspath>
+                            <mainClass>com.misc.Starter</mainClass>
+                            <useUniqueVersions>false</useUniqueVersions>
+                        </manifest>
+                        <manifestEntries>
+                            <Class-Path>./ ./config/</Class-Path>
+                        </manifestEntries>
+                    </archive>
+                </configuration>
+            </plugin>
+            <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
