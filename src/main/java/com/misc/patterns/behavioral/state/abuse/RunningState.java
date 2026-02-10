@@ -9,7 +9,7 @@ public class RunningState implements State {
 
     @Override
     public void click() {
-        stopwatch.setCurrentState( new StoppedState());
+        stopwatch.setCurrentState( new StoppedState(new Stopwatch()));
         System.out.println("Stopped");
     }
 }
