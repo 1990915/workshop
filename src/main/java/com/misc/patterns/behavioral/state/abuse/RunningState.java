@@ -11,5 +11,6 @@ public class RunningState implements State {
     public void click() {
         stopwatch.setCurrentState( new StoppedState(new Stopwatch()));
         System.out.println("Stopped");
+        System.out.println("Stopped2");
     }
 }
